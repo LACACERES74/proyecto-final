@@ -1,0 +1,40 @@
+$nombre-variable: valor;
+$color-texto: white;
+$fuentes-titulos: Arial, Helvetica, sans-serif;
+
+.primrerasec {
+    display: flex;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 50px;
+    text-align: center;
+
+
+
+
+    h2 {
+        color: $color-texto;
+        font-family: $fuentes-titulos;
+        justify-content: center;
+        padding: 50px 50px;
+
+    }
+
+    img {
+
+        width: 50%;
+        height: 25%;
+    }
+
+    p {
+        color: $color-texto;
+        font-family: $fuentes-titulos;
+
+        justify-content: center;
+        font-size: 2rem;
+
+        padding: 50px 50px;
+    }
+
+}

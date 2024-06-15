@@ -1,0 +1,17 @@
+$nombre-variable: valor;
+$color-texto: white;
+$fuentes-titulos: Arial, Helvetica, sans-serif;
+ 
+ .ListaBasica {
+    color: $color-texto;
+    font-family: $fuentes-titulos;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+        
+    .lista{
+        display: flex;
+        text-align: center;
+    }
+ }

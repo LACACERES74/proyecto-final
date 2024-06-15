@@ -1,0 +1,74 @@
+$nombre-variable: valor;
+$color-texto: white;
+$fuentes-titulos: Arial, Helvetica, sans-serif;
+
+header {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid gray;
+  padding: 50px 50px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 5px;
+
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: $color-texto;
+  font-family: $fuentes-titulos;
+ 
+}
+
+.menu-toggle {
+  display: none;
+  /* Ocultar el botón hamburguesa por defecto en dispositivos grandes */
+}
+
+nav ul li a:hover {
+  color: lightgray; /* Cambiar color de texto al pasar el mouse */
+}
+nav ul li a:hover::before {
+  transform: scaleX(1); /* Mostrar línea subrayada al pasar el mouse */
+}
+
+.h1 {
+  color: $color-texto;
+  font-family: $fuentes-titulos;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    /* Mostrar el botón hamburguesa en dispositivos móviles */
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: none;
+    /* Ocultar el menú desplegable por defecto en dispositivos móviles */
+  }
+
+  .hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+  }
+
+  .hamburger:before,
+  .hamburger:after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+  }
+}

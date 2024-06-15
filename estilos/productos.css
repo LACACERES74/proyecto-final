@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #242323;
+}
+
+
+
+/*header y narbar, h1 y h2*/
+
+header {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid gray;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 5px;
+
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
+nav ul li a:hover {
+  color: lightgray; /* Cambiar color de texto al pasar el mouse */
+}
+nav ul li a:hover::before {
+  transform: scaleX(1); /* Mostrar línea subrayada al pasar el mouse */
+}
+
+h1 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: inline-block;
+  padding: 0 px 40px;
+  justify-content: left;
+  justify-content: space-around
+}
+
+h2 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 50px 50px;
+}
+
+/* fin del header y narbar, h1 y h2*/
+
+/* inicio de secciones */
+/*primera seccion*/
+
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../imagenes/curso\ de\ tejidos.jpg);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.wrap-texto {
+  color: #000;
+  text-align: center;
+  width: 50%;
+  font-size: 2.5rem;
+
+}
+
+/*fin de la primera seccion*/
+
+/* inicio de grid de productos y h3*/
+
+h3 {
+  color: white;
+  text-align: center;
+  padding: 50px 50px;
+  font-size: 2rem;
+
+}
+
+.h3f {
+  color: white;
+  text-align: center;
+  padding: 50px 50px;
+  font-size: 2rem;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 2;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 100px;
+}
+
+
+.grid-container .grid-item {
+  display: grid;
+  font-size: 21px;
+  padding: 5px;
+
+
+  #talles {
+    width: 50%;
+    padding: 5px;
+    font-size: 16px;
+    
+  }
+}
+
+.grid-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+
+}
+
+
+
+.grid-containerfemeninos {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 2;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
+
+}
+
+.grid-containerfemeninos .grid-item {
+  display: grid;
+  font-size: 21px;
+  padding: 5px;
+
+
+  #talles {
+    width: 50%;
+    padding: 5px;
+    font-size: 16px;
+    
+  }
+}
+
+h4 {
+  color: white;
+  text-align: center;
+  padding: 50px 50px;
+  font-size: 2rem;
+}
+
+.grid-containervarios {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 2;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+
+
+/* fin de los grid */
+
+/*incio del footer*/
+
+
+footer {
+  display: flex;
+  color: white;
+  padding: 20px 20px 20px 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+
+}
+
+/*fin del footer*/
+
+/* media screen y nemu hamburguesa*/
+
+.menu-toggle {
+  display: none;
+  /* Ocultar el botón hamburguesa por defecto en dispositivos grandes */
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    /* Mostrar el botón hamburguesa en dispositivos móviles */
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: none;
+    /* Ocultar el menú desplegable por defecto en dispositivos móviles */
+  }
+
+  .hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+  }
+
+  .hamburger:before,
+  .hamburger:after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+  }
+}

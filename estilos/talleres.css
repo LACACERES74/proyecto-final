@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    background: linear-gradient(45deg, violet, blue, red);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+
+}
+
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid color black;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 5px;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul li a:hover {
+    color: lightgray; /* Cambiar color de texto al pasar el mouse */
+  }
+  nav ul li a:hover::before {
+    transform: scaleX(1); /* Mostrar línea subrayada al pasar el mouse */
+  }
+  
+
+h1 {
+    margin: 15;
+    color: white;
+}
+
+h2 {
+    margin: 15;
+    color: white;
+}
+
+
+.wrap {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../imagenes/curso\ de\ tejidos.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.wrap-texto {
+    color: #000;
+    text-align: center;
+    width: 50%;
+    font-size: 2.5rem;
+
+}
+
+
+p {
+    margin: auto;
+    padding: 50px 50px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h3 {
+    margin: auto;
+    padding: 50px 50px;
+
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.taller {
+    text-align: center;
+}
+
+.ul {
+    text-align: center;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+
+}
+
+ul li {
+
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+
+footer {
+    display: flex;
+
+    color: white;
+    padding: 20px 20px 20px 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.menu-toggle {
+    display: none;
+    /* Ocultar el botón hamburguesa por defecto en dispositivos grandes */
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        /* Mostrar el botón hamburguesa en dispositivos móviles */
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        display: none;
+        /* Ocultar el menú desplegable por defecto en dispositivos móviles */
+    }
+
+    .hamburger {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+    }
+
+    .hamburger:before,
+    .hamburger:after {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+    }
+}

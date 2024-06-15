@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+   
+    background:linear-gradient(45deg, blueviolet,red,blue);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+
+}
+
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+
+}
+
+
+/*inicio del header y navbar, h1 y h2*/
+
+
+header {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid gray;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 5px;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul li a:hover {
+    color: lightgray; /* Cambiar color de texto al pasar el mouse */
+  }
+  nav ul li a:hover::before {
+    transform: scaleX(1); /* Mostrar línea subrayada al pasar el mouse */
+  }
+  
+h1 {
+    display: flex;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    display: flex;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* fin del inicio del header y navbar, h1 y h2*/
+
+/*inicio de seciones*/
+/*promea seccion*/
+.wrap {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../imagenes/curso\ de\ tejidos.jpg);
+    background-size: cover;
+    background-position: center;
+  
+  }
+  
+  .wrap-texto {
+    color: white;
+    text-align: center;
+    width: 50%;
+    font-size: 2.5rem;
+  
+  }
+ /*fin de la primera seccion */
+ 
+ /* seccion para contactos**/
+
+ .formulario {
+    max-width: 400px;
+    margin:  15px auto;
+    color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+  }
+  
+  .formulario h2 {
+   
+    margin-top: 0;
+  }
+  
+  .campo {
+    margin-bottom: 15px;
+  }
+  
+  .campo label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .campo input[type="text"],
+  .campo input[type="email"],
+  .campo textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .campo textarea {
+    resize: vertical;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+
+
+/* fin de la seccion de contactos*/
+
+/* inicio del footer*/
+
+footer {
+    display: flex;
+
+    color: white;
+    padding: 20px 20px 20px 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* fin del footer*/
+
+/* meida screen y menu hamburguesa*/
+
+.menu-toggle {
+    display: none;
+    /* Ocultar el botón hamburguesa por defecto en dispositivos grandes */
+}
+
+ 
+@media only screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        /* Mostrar el botón hamburguesa en dispositivos móviles */
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        display: none;
+        /* Ocultar el menú desplegable por defecto en dispositivos móviles */
+    }
+
+    .hamburger {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+    }
+
+    .hamburger:before,
+    .hamburger:after {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+    }
+}

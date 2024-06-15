@@ -1,0 +1,18 @@
+$nombre-variable: valor;
+$color-texto: white;
+$fuentes-titulos: Arial, Helvetica, sans-serif;
+
+
+.footer {
+  display: flex;
+  color: $color-texto;
+  font-family: $fuentes-titulos;
+  padding: 20px 20px 20px 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  
+
+  
+  
+}
+
